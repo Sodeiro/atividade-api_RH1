@@ -1,0 +1,73 @@
+{
+  "info": {
+    "name": "API RH Empresa",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Criar Departamento",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"nome\": \"TI\"}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/departamentos",
+          "host": [
+            "http://localhost:5000"
+          ],
+          "path": [
+            "departamentos"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Criar Funcion\u00e1rio",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"nome\": \"Jo\\u00e3o\", \"cargo\": \"Analista\", \"departamento_id\": 1}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/funcionarios",
+          "host": [
+            "http://localhost:5000"
+          ],
+          "path": [
+            "funcionarios"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Listar Funcion\u00e1rios com Departamentos",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5000/funcionarios_com_departamentos",
+          "host": [
+            "http://localhost:5000"
+          ],
+          "path": [
+            "funcionarios_com_departamentos"
+          ]
+        }
+      }
+    }
+  ]
+}
